@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUSH_SWAP</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="module" src="./scripts/main.js" differ></script>
+</head>
+
+<body>
+    <header class="light-shadow">
+        <img class="header-logo" src="./public/images/logo.png" alt="Sort code logo">
+        <h1>Push Swap</h1>
+        <button class="btn">Help</button>
+    </header>
+    <main>
+        <section class="canvas-container light-shadow">
+            <div class="canvas-content">
+                <h2 class="centered_text section-title">Stack A</h2>
+                <canvas id="stackA_canvas" class="stack__canvas"></canvas>
+            </div>
+            <div class="canvas-content">
+                <h2 class="centered_text section-title">Stack B</h2>
+                <canvas id="stackB_canvas" class="stack__canvas"></canvas>
+            </div>
+        </section>
+        <section class="dashboard">
+            <div class="dashboard__commands">
+                <div class="dashboard__commands__elements dashboard__commands__operations">
+                    <h2 class="section-title">Operations</h2>
+                    <div class="operation__btns">
+                        <button id="buttonSA" class="btn operation_btn">SA</button>
+                        <button id="buttonSB" class="btn operation_btn">SB</button>
+                        <button id="buttonSS" class="btn operation_btn">SS</button>
+                        <button id="buttonPA" class="btn operation_btn">PA</button>
+                        <button id="buttonPB" class="btn operation_btn">PB</button>
+                        <button id="buttonRA" class="btn operation_btn">RA</button>
+                        <button id="buttonRB" class="btn operation_btn">RB</button>
+                        <button id="buttonRR" class="btn operation_btn">RR</button>
+                        <button id="buttonRRA" class="btn operation_btn">RRA</button>
+                        <button id="buttonRRB" class="btn operation_btn">RRB</button>
+                        <button id="buttonRRR" class="btn operation_btn">RRR</button>
+                    </div>
+                </div>
+                <div class="dashboard__commands__elements dashboard__commands__other">
+                    <h2 class="section-title">Other</h2>
+                    <div class="operation__btns">
+                        <button id="buttonStart" class="btn operation_btn">Start</button>
+                        <button id="buttonPause" class="btn operation_btn">Pause</button>
+                        <button id="buttonStop" class="btn operation_btn">Stop</button>
+                    </div>
+                    <div class="operation__btns">
+                        <button id="buttonUndo" class="btn operation_btn">Undo</button>
+                        <button id="buttonRedo" class="btn operation_btn">Redo</button>
+                        <button id="buttonNext" class="btn operation_btn">Next</button>
+                    </div>
+                    <div class="operation__btns">
+                        <button id="buttonReset" class="btn operation_btn">Reset</button>
+                    </div>
+                </div>
+                <div class="dashboard__commands__elements dashboard__commands__data">
+                    <h2 class="section-title">Data&nbsp;Management</h2>
+                    <div class="data__forms">
+                        <form id="addNumbersToAForm" class="data__form" action="/">
+                            <div class="form__input">
+                                <label for="numbersToAddA">Numbers</label>
+                                <input id="addNumbersToAInput" type="text" name="numbersToAddA" id="numbersToAddA"
+                                    placeholder="ex: 10 12 78 -58 -4 0">
+                            </div>
+                            <button id="buttonAddA" class="btn" type="submit">Add to A</button>
+                        </form>
+                        <form class="data__form" action="/">
+                            <div class="form__input">
+                                <label for="numbersToRemoveA">Numbers</label>
+                                <input type="text" name="numbersToRemoveA" id="numbersToRemoveA"
+                                    placeholder="ex: 10 12 78 -58 -4 0">
+                            </div>
+                            <button id="buttonRemoveA" class="btn" type="submit">Remove from A</button>
+                        </form>
+                        <form class="data__form" action="/">
+                            <div class="form__input">
+                                <label for="numbersToRemoveB">Numbers</label>
+                                <input type="text" name="numbersToRemoveB" id="numbersToRemoveB"
+                                    placeholder="ex: 10 12 78 -58 -4 0">
+                            </div>
+                            <button id="buttonRemoveB" class="btn" type="submit">Remove from B</button>
+                        </form>
+                        <form class="data__form" action="/">
+                            <div class="form__input">
+                                <label for="commands">Commands</label>
+                                <input type="text" name="commands" id="commands" placeholder="ex: ra rra sa sb rrr">
+                            </div>
+                            <button id="buttonAddCommands" class="btn" type="submit">Add to Queue</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="dashboard__commands__elements dashboard__commands__file">
+                    <h2 class="section-title">Upload&nbsp;File</h2>
+                    <div class="file__forms">
+                        <form class="file__form" action="/" method="post" enctype="multipart/form-data">
+                            <div class="form__input">
+                                <label for="numbersFile">Numbers</label>
+                                <input type="file" id="numbersFile" name="numbersFile" accept=".txt">
+                            </div>
+                            <button class="btn" type="submit">Upload</button>
+                        </form>
+                        <form class="file__form" action="/" method="post" enctype="multipart/form-data">
+                            <div class="form__input">
+                                <label for="commandFile">Commands</label>
+                                <input type="file" id="commandFile" name="commandFile" accept=".txt">
+                            </div>
+                            <button class="btn" type="submit">Upload</button>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="dashboard__output light-shadow">
+                <h2 class="section-title">Info&nbsp;:</h2>
+                <div class="dashboard__output__content">
+                    <ul class="dashboard__output__menu">
+                        <li id="consoleGeneralButton" class="dashboard__output__menu__item active-console">Console</li>
+                        <li id="consoleStacksButton" class="dashboard__output__menu__item">Stacks</li>
+                        <li id="consoleCommandsButton" class="dashboard__output__menu__item">Commands</li>
+                    </ul>
+                    <p id="consoleGeneral" class="dashboard__output__console active-console">General</p>
+                    <p id="consoleStacks" class="dashboard__output__console">Stacks</p>
+                    <p id="consoleCommands" class="dashboard__output__console">Commands</p>
+                </div>
+
+
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p class="footer_copyright">©CodeKiwi 2024</p>
+    </footer>
+</body>
+
+</html>

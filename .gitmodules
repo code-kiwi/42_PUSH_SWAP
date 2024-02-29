@@ -1,0 +1,3 @@
+[submodule "PUSH_SWAP/libft"]
+	path = PUSH_SWAP/libft
+	url = https://github.com/code-kiwi/42_LIBFT.git
