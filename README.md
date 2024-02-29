@@ -47,7 +47,7 @@ If you compiled the bonus part, another executable `checker` was created.
   > - **"OK"** if the list is sorted after applying your instructions
   > - **"KO"** is the list is not sorted
   > - **"Error"** if an error occured or if one of your instructions is invalid
-- You can combine bot programs:
+- You can combine both programs:
   > `./push_swap -10 5 100 -6 10 | ./checker -10 5 100 -6 10`<br>
   > or `ARG="-10 5 100 10"; ./push_swap $ARG | ./checker $ARG`<br>
   > It will show you if the instructions given by the push_swap program really sort the list<br>
