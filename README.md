@@ -66,7 +66,7 @@ Each file needs to be copied to the root of the repository.
 ## Grade
 ![PS](https://raw.githubusercontent.com/ayogun/42-project-badges/main/badges/push_swapm.png)<br><br>
 `125/125`<br>
-> Note really deserved because the custom algorithm needs more than 5500 instructions on 500 numbers in very specific cases.<br>
+> Not really deserved because the custom algorithm needs more than 5500 instructions on 500 numbers in very specific cases.<br>
 > I should have stored the instructions from both algorithms in order to take the most efficient set of instructions
 
 ## Credits
