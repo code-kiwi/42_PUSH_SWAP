@@ -1,4 +1,5 @@
-# ![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white) PUSH_SWAP
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=for-the-badge&logo=c&logoColor=white)
+# PUSH_SWAP
 
 > **Note:** This is a project from **42 learning cursus**.
 
